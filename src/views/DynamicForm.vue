@@ -7,7 +7,7 @@
       class="mb-4 p-3 border rounded text-start"
     >
       <button
-        @click="formArray.splice(index,1)"
+        @click="formArray.splice(index, 1)"
         type="button"
         v-if="index > 0"
         class="btn btn-danger btn-sm float-end"
@@ -77,6 +77,7 @@ export default {
   methods: {
     submitForm() {
       // Handle form submission logic here
+      console.log(this.formArray);
       alert(`Form data submitted:${JSON.stringify(this.formArray)}`);
     },
     addPerson() {
