@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ChildOne class="my-4" @child-event="customMessage" messageFromParent="Hello my child one" />
+    <ChildTwo @child-event="customMessage" messageFromParent="Hello my child two" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import ChildOne from "../components/ChildOne.vue";
+import ChildTwo from "../components/ChildTwo.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    ChildOne,
+    ChildTwo
+  },
+  methods: {
+    customMessage(v) {
+      alert('From child' + v)
+    }
+  },
+};
 </script>
