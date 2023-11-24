@@ -19,12 +19,12 @@ export default {
 
   methods: {
     sendMsgToSibling() {
-      this.emitter.emit('childB-event', 'Hello from Child B!');
+      this.emitter.emit('childTwo-event', 'Hello from Child Two!');
     },
   },
   mounted() {
     // Listen for events from Child One
-    this.emitter.on("childA-event", (message) => {
+    this.emitter.on("childOne-event", (message) => {
       this.messageFromSibling = message;
     });
   },

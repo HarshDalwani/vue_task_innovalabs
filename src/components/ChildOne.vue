@@ -29,15 +29,15 @@ export default {
   },
   methods: {
     onButtonClick() {
-      this.$emit("child-event", "from one");
+      this.$emit("child-event", "one");
     },
     sendMsgToSibling() {
-      this.emitter.emit("childA-event", "Hello from Child A!");
+      this.emitter.emit("childOne-event", "Hello from Child One!");
     },
   },
   mounted() {
     // Listen for events from Child Two
-    this.emitter.on("childB-event", (message) => {
+    this.emitter.on("childTwo-event", (message) => {
       this.messageFromSibling = message;
     });
   },

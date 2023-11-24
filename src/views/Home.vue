@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <ChildOne class="my-4" @child-event="customMessage" messageFromParent="Hello my child one" />
-    <ChildTwo @child-event="customMessage" messageFromParent="Hello my child two" />
+    <ChildTwo  />
   </div>
 </template>
 
